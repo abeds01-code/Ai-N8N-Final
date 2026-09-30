@@ -77,7 +77,7 @@
         192
       ],
       "id": "d7b8d1b6-6452-44ad-8e95-c083cf36788b",
-      "name": "HTTP Request"
+      "name": "cars-info"
     }
   ],
   "pinData": {},
@@ -115,7 +115,7 @@
         ]
       ]
     },
-    "HTTP Request": {
+    "cars-info": {
       "ai_tool": [
         [
           {
@@ -133,7 +133,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "b7470655-7cad-432e-8966-6df9314e7fbb",
+  "versionId": "bb9c6bac-a842-4b59-9922-9ac7b5d311ef",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7c1cf52d28186071ad3649d5acb06d7656c48549f6f6295d8cdf655c21803996"
