@@ -1,0 +1,294 @@
+CAR INFORMATION
+Knowledge base for a car information chatbot
+
+This document contains general educational information about cars. Model descriptions are general, not specifications for a particular model year or market. Engines, transmissions, equipment and body styles can vary by generation, year, trim and country. Exact prices, horsepower, fuel consumption, maintenance intervals and reliability rankings are not supplied. If a requested detail is missing, the chatbot should say that the document does not contain enough information.
+
+_________
+
+CAR MODELS
+
+Volkswagen Golf
+Category: Compact car.
+Body style: Commonly a hatchback.
+Description: The Golf is a compact passenger car suitable for everyday transport. Different generations and versions have different engines and transmissions.
+Comparison topic: Compare a hatchback's dimensions and cargo access with a larger family liftback such as the Octavia. Exact dimensions are not included here.
+
+Volkswagen Polo
+Category: Small passenger car.
+Body style: Commonly a hatchback.
+Description: The Polo is a smaller Volkswagen passenger car. Its compact format is relevant when discussing city driving and parking.
+Limit: This document does not specify its engine, equipment or fuel consumption.
+
+Volkswagen Passat
+Category: Family car.
+Body style: Sedan and estate versions have existed; availability depends on generation and market.
+Description: The Passat belongs to a larger vehicle class than the Polo. It can be discussed in the context of passenger and luggage space.
+Limit: Do not assume that every generation offers the same body styles.
+
+Skoda Octavia
+Category: Family car.
+Body style: Liftback and estate versions have existed.
+Description: The Octavia is a family car with a practical luggage compartment. A liftback's rear opening includes the rear glass, unlike a conventional sedan trunk opening.
+Limit: This document does not identify a particular engine or transmission.
+
+Skoda Fabia
+Category: Small passenger car.
+Body style: Hatchback; estate versions also existed in some generations.
+Description: The Fabia is a small Skoda model. Its compact format can be discussed when explaining small cars and urban transport.
+Limit: Body styles depend on generation.
+
+Skoda Superb
+Category: Large family car.
+Body style: Liftback and estate versions have existed.
+Description: The Superb is a larger Skoda passenger car associated with passenger and luggage space.
+Limit: Exact dimensions, boot capacity and equipment are not included.
+
+Audi A3
+Category: Premium compact car.
+Body style: Hatchback and sedan versions have existed, depending on generation and market.
+Description: The A3 is a compact Audi model. Compare the specific year and trim before discussing its features or performance.
+Limit: The Audi badge alone does not establish reliability, running costs or equipment.
+
+Audi A4
+Category: Premium passenger car.
+Body style: Sedan and estate versions have existed.
+Description: The A4 is an Audi passenger car with multiple generations and engine options.
+Limit: This document does not provide current availability, prices or specifications.
+
+BMW 3 Series
+Category: Premium passenger car.
+Body style: Sedan and estate versions have existed, along with other body styles in earlier generations.
+Description: The 3 Series is a BMW model family. Performance and drivetrain depend on the specific version.
+Limit: Do not claim that every 3 Series has the same engine or driven wheels.
+
+Mercedes-Benz C-Class
+Category: Premium passenger car.
+Body style: Sedan and estate versions have existed; other body styles depend on generation.
+Description: The C-Class is a Mercedes-Benz passenger-car family. Equipment and propulsion differ between versions.
+Limit: Luxury branding does not guarantee a particular feature or low maintenance costs.
+
+Toyota Corolla
+Category: Compact family car.
+Body style: Sedan, hatchback and estate versions have existed, depending on market and generation.
+Description: The Corolla is a Toyota passenger-car family. Hybrid versions exist, but not every Corolla is a hybrid.
+Limit: No reliability ranking or exact fuel-consumption figure is supplied.
+
+Toyota Yaris
+Category: Small passenger car.
+Body style: Commonly a hatchback; other versions depend on market.
+Description: The Yaris is a small Toyota model. Some versions use a hybrid powertrain.
+Limit: Do not confuse the regular Yaris with a different model simply because it includes Yaris in its name.
+
+Honda Civic
+Category: Compact passenger car.
+Body style: Hatchback and sedan versions have existed, among other earlier body styles.
+Description: The Civic is a Honda model family. Engines and transmissions differ by year, version and market.
+Limit: A standard Civic and a performance version must not be treated as having identical specifications.
+
+Mazda3
+Category: Compact passenger car.
+Body style: Hatchback and sedan versions have existed.
+Description: The Mazda3 is a Mazda passenger car offered in different generations and powertrain configurations.
+Limit: Exact engine output and transmission are not included.
+
+Alfa Romeo Giulia
+Category: Premium passenger car.
+Body style: The modern Giulia is a sedan.
+Description: The modern Giulia is an Alfa Romeo passenger car. Standard and high-performance versions differ substantially.
+Limit: Do not transfer specifications from a performance version to every Giulia.
+
+_________
+
+BODY STYLES
+
+Sedan
+A passenger-car body style with a separate luggage compartment. The trunk lid normally opens without lifting the rear window.
+
+Hatchback
+A car with a rear door that includes the rear window and provides access to the luggage area. Folding rear seats can increase usable cargo space when the car supports this feature.
+
+Liftback
+A body style with a sloping rear section and a large rear door that includes the rear window. It can resemble a sedan while offering hatchback-style luggage access.
+
+Estate / Station wagon
+A body style with an extended roof and rear cargo area. It is useful for discussing luggage access and carrying bulky items.
+
+SUV
+Sport utility vehicle. SUVs commonly have a taller body and higher seating position than conventional passenger cars. An SUV is not automatically four-wheel drive or suitable for difficult off-road driving.
+
+Coupe
+A body style commonly associated with a sporty profile and two doors. Manufacturer naming conventions can differ.
+
+Convertible
+A vehicle with a roof that can be opened or retracted.
+
+_________
+
+ENGINES AND POWERTRAINS
+
+Petrol engine
+An internal-combustion engine that uses petrol. Fuel is burned to produce mechanical power.
+
+Diesel engine
+An internal-combustion engine that uses diesel fuel and compression ignition. Running costs depend on the specific vehicle, usage, fuel prices and maintenance.
+
+Turbocharger
+A device driven by exhaust gases that compresses intake air. It allows an engine to take in more air. A turbocharger alone does not determine fuel consumption or reliability.
+
+Naturally aspirated engine
+An engine that does not use a turbocharger or supercharger to force air into the intake.
+
+Hybrid vehicle
+A vehicle combining an internal-combustion engine and an electric motor. Hybrid systems differ in how much they can propel the vehicle electrically.
+
+Plug-in hybrid
+A hybrid with a battery that can be charged from an external electricity source. Electric range and charging capability depend on the model.
+
+Electric vehicle
+A battery-electric vehicle uses electric motors and a rechargeable battery for propulsion. Range depends on battery capacity, speed, temperature, driving style and other factors.
+
+TSI
+A Volkswagen Group designation commonly used for turbocharged petrol engines. The name alone does not identify engine size, output or a particular engine generation.
+
+TDI
+A Volkswagen Group designation associated with turbocharged diesel engines. Specifications depend on the exact version.
+
+Horsepower
+A unit used to express power. Power is relevant to performance, but acceleration also depends on vehicle mass, gearing, traction and other factors.
+
+Torque
+A measure of turning force. Engine torque and the transmission together influence the force available at the wheels.
+
+Engine displacement
+The total swept volume of an engine's cylinders, commonly expressed in litres or cubic centimetres. A larger displacement does not automatically mean a faster car.
+
+_________
+
+TRANSMISSIONS AND DRIVETRAINS
+
+Manual transmission
+The driver selects gears and normally operates a clutch pedal.
+
+Automatic transmission
+A transmission that can select gears automatically. Different automatic-transmission designs exist.
+
+DSG
+A Volkswagen Group name for dual-clutch transmissions. A dual-clutch transmission uses two clutches to manage different sets of gears. DSG versions differ in design, number of gears and service requirements. Do not assume all DSG units have the same maintenance schedule.
+
+CVT
+Continuously variable transmission. A conventional CVT can vary its transmission ratio continuously rather than relying only on fixed gear steps. Some hybrid systems use the term e-CVT for a different mechanical arrangement.
+
+Front-wheel drive
+Engine or motor power is delivered to the front wheels.
+
+Rear-wheel drive
+Engine or motor power is delivered to the rear wheels.
+
+All-wheel drive
+A system that can deliver power to both front and rear wheels. System operation differs by vehicle. It does not eliminate the need for suitable tyres or careful driving.
+
+_________
+
+FUEL CONSUMPTION AND OWNERSHIP
+
+Fuel consumption
+The amount of fuel used over a distance. It can be expressed as litres per 100 kilometres or kilometres per litre.
+
+Reading fuel-consumption units
+For litres per 100 kilometres, a lower number means less fuel used for the same distance. For kilometres per litre, a higher number means more distance travelled on the same amount of fuel.
+
+Fuel consumption in practice
+Traffic, speed, driving style, load, tyre pressure, weather and maintenance can affect consumption. Published test figures may differ from real-world results.
+
+Total ownership cost
+Ownership cost includes more than the purchase price. It can include fuel or electricity, insurance, maintenance, repairs, tyres and depreciation. This document does not contain local prices or individual quotations.
+
+Reliability
+Reliability should be considered for the exact engine, transmission, model year and individual vehicle. Brand reputation alone does not establish the condition of a used car.
+
+_________
+
+MAINTENANCE BASICS
+
+Service schedule
+Use the manufacturer's schedule for the exact vehicle and operating conditions. This document does not provide a universal service interval.
+
+Engine oil
+Engine oil lubricates internal engine components. Use the oil specification and checking procedure stated in the vehicle handbook.
+
+Cooling system
+The cooling system helps control engine temperature. Coolant type and inspection procedures depend on the vehicle.
+
+Brakes
+Brake pads and discs are wear components. Inspection and replacement depend on their condition and the manufacturer's requirements.
+
+Tyres
+Tyre condition and pressure matter for handling and wear. Use the vehicle's specified pressures and approved tyre sizes rather than a universal pressure value.
+
+Battery
+In many combustion-engine cars, the low-voltage battery provides starting power. Electric and hybrid cars can have both a traction battery and a separate low-voltage battery.
+
+Timing belt and timing chain
+Both can coordinate engine components, but designs and service requirements differ. This document does not identify which system a particular engine uses.
+
+Warning lights
+Warning-light meanings and required actions should be checked in the vehicle handbook. This document cannot diagnose a fault from a warning light alone.
+
+_________
+
+COMPARING CARS
+
+Golf and Octavia
+The Golf is commonly a compact hatchback. The Octavia has liftback and estate versions. A comparison can discuss body style and luggage access, but exact space, performance and fuel consumption require matching model-year specifications.
+
+Polo and Superb
+The Polo is a small passenger car, while the Superb is a larger family car. Their vehicle classes differ. This document cannot supply exact dimensions or costs.
+
+Audi A3 and BMW 3 Series
+The A3 belongs to the premium compact class. The 3 Series belongs to a larger premium passenger-car class. Neither is universally better; a useful comparison needs the user's priorities and exact versions.
+
+Petrol and electric
+A petrol car burns fuel in an engine. A battery-electric car uses stored electrical energy and electric motors. Comparing running costs requires actual energy prices, consumption and usage data, which are not included here.
+
+Manual and automatic
+A manual normally requires the driver to operate the clutch and select gears. An automatic can select gears automatically. Convenience, performance and maintenance depend on the particular transmission.
+
+_________
+
+FREQUENTLY ASKED QUESTIONS
+
+What is DSG?
+DSG is a Volkswagen Group name for a dual-clutch transmission. Different DSG versions have different designs and service requirements.
+
+Does every SUV have all-wheel drive?
+No. Body style and driven wheels are separate characteristics.
+
+Is every Toyota Corolla a hybrid?
+No. Powertrain availability depends on the model year and market.
+
+Does a bigger engine always make a car faster?
+No. Power, vehicle weight, gearing, traction and other factors also affect performance.
+
+Which car is the most reliable?
+This document does not contain a reliability ranking. The exact version, maintenance history and vehicle condition matter.
+
+What is the fuel consumption of a specific car?
+This document does not include exact consumption figures. The model year, engine, transmission and test conditions must be identified.
+
+What is the price of a car in Israel?
+Prices are not included in this document.
+
+Which car should I choose?
+First identify intended use, passenger and luggage needs, budget and driving preferences. This document can explain categories and basic differences, but it cannot rank specific purchases or provide current offers.
+
+What should be checked before buying a used car?
+Relevant checks include maintenance records, vehicle identity, condition and an independent inspection. This document does not provide legal procedures or guarantee any vehicle's condition.
+
+Can you diagnose an engine or gearbox problem?
+No. This document explains basic concepts but does not provide enough information to diagnose a particular fault.
+
+Can you answer questions about phones, hotels or programming?
+No. The chatbot's subject is cars and the car information contained in this document.
+
+What if the requested answer is not in this file?
+Say that the document does not contain enough information. Do not invent missing specifications, prices or facts.
