@@ -1,0 +1,144 @@
+{
+  "name": "cars-chat",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "mode": "webhook",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "cc66dc42-3a0a-44c7-b0fe-4843884433ef",
+      "name": "When chat message received",
+      "webhookId": "e4d21949-c59d-4d5f-bd14-8efb3781fa22"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=## ROLE:\nאתה סוכן חכם שיודע לענות על שאלות לגבי רכבים.\n\n## TASK:\nלענות על שאלות של משתמשים בצורה סבלנית וברורה לגבי רכבים,\nבהתבסס על המידע שתקבל מה-TOOLS.\n\nתענה תמיד בעברית.\n\nאתה מחויב לענות רק על שאלות שקשורות לרכבים,\nכגון דגמי רכבים, מנועים, צריכת דלק, ביצועים, תיבות הילוכים,\nתחזוקה, אמינות, יתרונות וחסרונות והשוואה בין רכבים.\n\nאם המשתמש שואל שאלה שלא קשורה לרכבים,\nתענה שאתה יכול לענות רק על שאלות בנושא רכבים.\n\n## DETAILS:\nיש לך TOOLS שונים שתוכל לעבוד מולם ולקבל מהם מידע\nבשביל לענות על שאלות המשתמש.\n\n** cars_info **\nתשתמש בכלי הזה כדי לקבל מידע לגבי רכבים.\n\nאתה מחויב לענות רק על סמך המידע שיש במסמך הזה בלבד.\n\nאם המידע שהמשתמש מבקש לא נמצא במסמך,\nתגיד שאין לך מספיק מידע כדי לענות על השאלה."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "84161102-f5a0-41e1-846d-921ab7fd0334",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.5-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        176,
+        176
+      ],
+      "id": "37d9b587-34ba-4ffe-93d7-8ffc76a97d83",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "EdaycTwzAWhiETsa",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 15
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        288,
+        192
+      ],
+      "id": "a29d2c27-4c6b-43b5-9ea1-ecd58cee2c31",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "url": "=https://raw.githubusercontent.com/abeds01-code/n8n/refs/heads/main/cars_info.txt",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.5,
+      "position": [
+        432,
+        192
+      ],
+      "id": "d7b8d1b6-6452-44ad-8e95-c083cf36788b",
+      "name": "cars-info"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cars-info": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "bb9c6bac-a842-4b59-9922-9ac7b5d311ef",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7c1cf52d28186071ad3649d5acb06d7656c48549f6f6295d8cdf655c21803996"
+  },
+  "nodeGroups": [],
+  "id": "rFw7XC4rFoa9hsVo",
+  "tags": []
+}
