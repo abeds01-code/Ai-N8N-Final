@@ -1,0 +1,291 @@
+{
+  "name": "birthday",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "6ed9a5b3-9e0b-45a6-97e1-6c87aa518bf8",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "477c3f09-3f7a-4a85-b21d-7b8ef030dda1",
+      "name": "Webhook",
+      "webhookId": "6ed9a5b3-9e0b-45a6-97e1-6c87aa518bf8"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ {\n  message: \"הברכה נוצרה והתקבלה לשליחה במייל\",\n  greeting: $('Basic LLM Chain').item.json.text\n} }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1024,
+        0
+      ],
+      "id": "804896e1-2473-4ba7-ab70-4aa8b346b5e0",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "צור ברכת יום הולדת לפי הפרטים שבהוראות.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=## ROLE\nאתה סוכן שמייצר ברכת יום הולדת לפי הפרטים שהמשתמש נתן לך.\n\n## TASK\nצור ברכת יום הולדת בעברית עבור:\n{{ $json.body.recipientName }}\n\nשלב בברכה את הנושאים האהובים:\n{{ $json.body.favoriteTopics }}\n\nהתאם את לשון הברכה למין:\n{{ $json.body.gender }}\nmale = זכר, female = נקבה.\n\nכתוב בסגנון שמח, אישי וקליל, עד 80 מילים.\n\nסיים בחתימה בשם שולח הברכה:\n{{ $json.body.senderName }}\n\nהחזר רק את הברכה, ללא הסברים נוספים."
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        224,
+        0
+      ],
+      "id": "53cab08f-8644-403a-813a-a32b5f0e4a87",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.5-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        296,
+        232
+      ],
+      "id": "947cd82f-f25f-47b5-8a3d-a6d534ce8fe7",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "EdaycTwzAWhiETsa",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appieDm190EBVyOeZ",
+          "mode": "list",
+          "cachedResultName": "birthday",
+          "cachedResultUrl": "https://airtable.com/appieDm190EBVyOeZ"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblYDhGHe2i1PsfF6",
+          "mode": "list",
+          "cachedResultName": "Greetings",
+          "cachedResultUrl": "https://airtable.com/appieDm190EBVyOeZ/tblYDhGHe2i1PsfF6"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "recipientName": "={{ $('Webhook').item.json.body.recipientName }}",
+            "senderName": "={{ $('Webhook').item.json.body.senderName }}",
+            "gender": "={{ $('Webhook').item.json.body.gender }}",
+            "favoriteTopics": "={{ $('Webhook').item.json.body.favoriteTopics }}",
+            "recipientEmail": "={{ $('Webhook').item.json.body.recipientEmail }}",
+            "greeting": "={{ $json.text }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "recipientName",
+              "displayName": "recipientName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "senderName",
+              "displayName": "senderName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "gender",
+              "displayName": "gender",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "favoriteTopics",
+              "displayName": "favoriteTopics",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "greeting",
+              "displayName": "greeting",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "recipientEmail",
+              "displayName": "recipientEmail",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        576,
+        0
+      ],
+      "id": "23c22832-9bf8-4fb0-b473-71a9ad33ac73",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "R2u40E4Xs6sk4zVo",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "subject": "יום הולדת שמח!",
+        "textContent": "={{ $json.fields.greeting }}",
+        "sender": "=abedsultan317@gmail.com",
+        "receipients": "={{ $json.fields.recipientEmail }}",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.sendInBlue",
+      "typeVersion": 1,
+      "position": [
+        800,
+        15.381818181818204
+      ],
+      "id": "52f087b2-d7f3-4cee-b285-26168abc79f9",
+      "name": "Send a transactional email",
+      "credentials": {
+        "sendInBlueApi": {
+          "id": "knhwPRx4E7MI3RRn",
+          "name": "Brevo account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a record": {
+      "main": [
+        [
+          {
+            "node": "Send a transactional email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a transactional email": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "b425719b-fac6-4033-9ce7-9024bb0bbc91",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7c1cf52d28186071ad3649d5acb06d7656c48549f6f6295d8cdf655c21803996"
+  },
+  "nodeGroups": [],
+  "id": "RklfbNAONQM0JExz",
+  "tags": []
+}
